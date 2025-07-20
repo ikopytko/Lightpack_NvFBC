@@ -144,6 +144,7 @@ jobs:
         shell: bash
         run: |
           echo "OPENSSL_DIR = \"C:\\Program Files\\OpenSSL\\bin\"" > build-vars.prf
+          echo "OPENSSL_LIB = \"C:\\Program Files\\OpenSSL\\lib\"" > build-vars.prf
           echo "DEFINES += BASS_SOUND_SUPPORT" >> build-vars.prf
           echo "BASS_DIR = \"C:\\bass\"" >> build-vars.prf
           echo "BASSWASAPI_DIR = \"C:\\bass\\wasapi\"" >> build-vars.prf

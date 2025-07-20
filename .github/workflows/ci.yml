@@ -8,7 +8,7 @@ defaults:
     working-directory: ./Software
 jobs:
   build-pacman:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     name: pacman Build (Arch Linux)
     steps:
       - name: Checkout Source
@@ -29,7 +29,7 @@ jobs:
           path: ${{ env.PKG_PATH }}
 
   build-flatpack:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     name: Flatpack Build
     steps:
       - name: Checkout Source
@@ -56,7 +56,7 @@ jobs:
           path: ${{ env.PKG_PATH }}
 
   build-dpkg:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         os: [ 'ubuntu 22.04', 'ubuntu 20.04', 'debian 12.4' ]
@@ -181,7 +181,7 @@ jobs:
 
   build-macos:
     name: macOS Build
-    runs-on: macOS-11
+    runs-on: macOS-14
     env:
       QT_DEST: Qt
     steps:
